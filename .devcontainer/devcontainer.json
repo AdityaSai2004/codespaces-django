@@ -7,8 +7,7 @@
   "updateContentCommand": "pip install -r requirements.txt && python manage.py migrate",
   "postCreateCommand": [
     "cp .env.example .env",
-    "chmod +x setup_db.sh", 
-    "setup_db.sh"  
+    "docker compose up" 
   ],  
   "postAttachCommand": {
     "server": "python manage.py runserver"
@@ -31,5 +30,5 @@
       "onAutoForward": "openPreview"
     }
   },
-  "forwardPorts": [8000]
+  "forwardPorts": [8000, 8080]
 }

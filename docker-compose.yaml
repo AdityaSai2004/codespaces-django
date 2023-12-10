@@ -1,0 +1,12 @@
+services:
+  db:
+    image: mysql:latest
+    container_name: "mysql"
+    ports:
+        - 8806:3306
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: "user"
+      MYSQL_USER: "user"
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+
